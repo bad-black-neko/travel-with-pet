@@ -12,7 +12,7 @@ const session = require('express-session');
 const FileStore = require('session-file-store')(session);
 
 const mainRouter = require('./routes/main_page');
-// const regRouter = require('./routes/registr');
+const regRouter = require('./routes/registr');
 // const loginRouter = require('./routes/login');
 // const mainTwoRouter = require('./routes/mainTwo');
 // const personalAreaRouter = require('./routes/personalArea');
@@ -47,6 +47,7 @@ const sessionConfig = {
 app.use(session(sessionConfig));
 
 app.use('/', mainRouter);
+app.use('/registr', regRouter);
 
 // app.get('/logout', (req, res) => {
 //   if (req.session.newUser) {
