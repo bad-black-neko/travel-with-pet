@@ -1,0 +1,26 @@
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+.bg-light {
+    background: rgb(255,199,59);
+    background: linear-gradient(90deg, rgba(255,199,59,1) 0%, rgba(255,188,188,1) 35%, rgba(221,165,255,1) 100%);
+}
+
+.navbar-brand {
+    color: white;
+    font-weight: bold;
+    font-size: 25px;
+}
+
+.nav-link {
+    color: white;
+    font-size: 20px;
+}
+
+.navbar-nav .nav-link.active, .navbar-nav .show>.nav-link {
+    color: rgb(166, 76, 221);
+}
+
+.navbar-nav {
+    --bs-nav-link-hover-color: rgb(166, 76, 221);
+}
