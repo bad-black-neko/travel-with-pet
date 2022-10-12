@@ -14,50 +14,67 @@ module.exports = function Layout({
                 <link rel="preconnect" href="https://fonts.googleapis.com" />
                 <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin />
                 <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@500;800&display=swap" rel="stylesheet" />
+                <script defer src="https://api-maps.yandex.ru/2.1/?apikey=8d3809d6-9aeb-4ad4-b3f2-d4a0a0708836&lang=en_US"
+                    type="text/javascript">
+                </script>
+                <script defer type="text/javascript" src="/js/map.js" />
+                {/* <script defer type="text/javascript">
+                    // Сразу после загрузки API будет
+                    // вызвана функция init.
+                    // На момент ее исполнения div-контейнер 
+                    // карты уже будет готов.
+                    function init (ymaps) {
+                        var myMap = new ymaps.Map("YMapsID", {
+                            center: [55.87, 37.66],
+                            zoom: 10
+                        });
+                    }
+                </script> */}
+
                 <script defer src="/js/logout.js" />
                 <title>Easy travel with your pet</title>
-                </head>
-                    <header>
-                        <nav className="navbar navbar-expand-lg navbar-light bg-light">
-                            <div className="container-fluid">
-                                <a className="navbar-brand active" href="/">PetTrip</a>
+            </head>
+            <header>
+                <nav className="navbar navbar-expand-lg navbar-light bg-light">
+                    <div className="container-fluid">
+                        <a className="navbar-brand active" href="/">PetTrip</a>
 
-                            { !newUser ? (
-                                <div className="collapse navbar-collapse" id="navbarNav">
-                                    <ul className="navbar-nav">
-                                        <li className="nav-item">
-                                            <a className="nav-link" aria-current="page" href="#">About</a>
-                                        </li>
-                                        <li className="nav-item">
-                                            <a className="nav-link" href="/registr">Registr</a>
-                                        </li>
-                                        <li className="nav-item">
-                                            <a className="nav-link" href="/login">Login</a>
-                                        </li>
-                                    </ul>
-                                </div> 
-                                ) : (
-                                    <div className="collapse navbar-collapse" id="navbarNav">
-                                    <ul className="navbar-nav">
-                                        <li className="nav-item">
-                                            <a className="nav-link" aria-current="page" href="/counties">Country navigation</a>
-                                        </li>
-                                        <li className="nav-item">
-                                            <a className="nav-link" href="/mypet">My pet</a>
-                                        </li>
-                                        <li className="nav-item">
-                                            <a className="nav-link" id="logout" href="/logout">Logout</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            )}
+                        {!newUser ? (
+                            <div className="collapse navbar-collapse" id="navbarNav">
+                                <ul className="navbar-nav">
+                                    <li className="nav-item">
+                                        <a className="nav-link" aria-current="page" href="#">About</a>
+                                    </li>
+                                    <li className="nav-item">
+                                        <a className="nav-link" href="/registr">Registr</a>
+                                    </li>
+                                    <li className="nav-item">
+                                        <a className="nav-link" href="/login">Login</a>
+                                    </li>
+                                </ul>
                             </div>
-                        </nav>
-                    </header>
-                    <body>
-                        {children}
-                        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossOrigin="anonymous" />
-                    </body>
-                </html>
-                );
+                        ) : (
+                            <div className="collapse navbar-collapse" id="navbarNav">
+                                <ul className="navbar-nav">
+                                    <li className="nav-item">
+                                        <a className="nav-link" aria-current="page" href="/countries">Country navigation</a>
+                                    </li>
+                                    <li className="nav-item">
+                                        <a className="nav-link" href="/mypet">My pet</a>
+                                    </li>
+                                    <li className="nav-item">
+                                        <a className="nav-link" id="logout" href="/logout">Logout</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        )}
+                    </div>
+                </nav>
+            </header>
+            <body>
+                {children}
+                <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossOrigin="anonymous" />
+            </body>
+        </html >
+    );
 };
