@@ -21,6 +21,8 @@ const loginUser = async (req, res) => {
       req.session.save(() => {
         res.redirect('/');
       });
+
+      // console.log(req.session)
     } else {
       res.redirect('/login');
     }

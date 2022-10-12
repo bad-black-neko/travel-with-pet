@@ -6,9 +6,6 @@ router.get('/logout', (req, res) => {
             res.clearCookie('travel-with-pet');
             res.sendStatus(200);
         });
-        req.session.save(() => {
-            res.redirect('/');
-          });
     } else {
         res.sendStatus(400);
     }

@@ -26,7 +26,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
 const sessionConfig = {
-  name: 'travel-with-pet',
+  name: 'travelwithpet',
   store: new FileStore(),
   secret: 'supermagic',
   resave: false,
@@ -47,7 +47,7 @@ app.use('/login', loginRouter);
 app.get('/logout', (req, res) => {
   if (req.session.newUser) {
     req.session.destroy(() => {
-      res.clearCookie('travel-with-pet');
+      res.clearCookie('travelwithpet');
       res.sendStatus(200);
     });
   } else {

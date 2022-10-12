@@ -3,7 +3,7 @@ const Layout = require('./Layout');
 
 module.exports = function Login() {
   return (
-    <Layout newUser={null}>
+    <Layout>
             <link rel="stylesheet" href="css/login.css" />
             {/* <img className='round-img' src='../img/round.png'></img> */}
             <div className='login-form-wrapper'>

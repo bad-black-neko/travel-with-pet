@@ -14,7 +14,7 @@ module.exports = function Layout({
                 <link rel="preconnect" href="https://fonts.googleapis.com" />
                 <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin />
                 <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@500;800&display=swap" rel="stylesheet" />
-                        {/* <script defer src="/js/basketAdd.js" /> */}
+                <script defer src="/js/logout.js" />
                 <title>Easy travel with your pet</title>
                 </head>
                     <header>
@@ -22,7 +22,7 @@ module.exports = function Layout({
                             <div className="container-fluid">
                                 <a className="navbar-brand active" href="/">PetTrip</a>
 
-                            {/* { newUser ? ( */}
+                            { !newUser ? (
                                 <div className="collapse navbar-collapse" id="navbarNav">
                                     <ul className="navbar-nav">
                                         <li className="nav-item">
@@ -36,7 +36,7 @@ module.exports = function Layout({
                                         </li>
                                     </ul>
                                 </div> 
-                                {/* ) : (
+                                ) : (
                                     <div className="collapse navbar-collapse" id="navbarNav">
                                     <ul className="navbar-nav">
                                         <li className="nav-item">
@@ -46,11 +46,11 @@ module.exports = function Layout({
                                             <a className="nav-link" href="/mypet">My pet</a>
                                         </li>
                                         <li className="nav-item">
-                                            <a className="nav-link" href="/logout">Logout</a>
+                                            <a className="nav-link" id="logout" href="/logout">Logout</a>
                                         </li>
                                     </ul>
                                 </div>
-                            )} */}
+                            )}
                             </div>
                         </nav>
                     </header>

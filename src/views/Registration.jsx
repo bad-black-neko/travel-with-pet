@@ -3,7 +3,7 @@ const Layout = require('./Layout');
 
 module.exports = function Registr() {
     return (
-        <Layout newUser={null}>
+        <Layout>
             <link rel="stylesheet" href="css/registr.css" />
             {/* <img className='round-img' src='../img/round.png'></img> */}
             <div className='registr-form-wrapper'>

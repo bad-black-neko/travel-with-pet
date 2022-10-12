@@ -4,6 +4,7 @@ const Main = require('../views/Main');
 
 router.get('/', (req, res) => {
     const { newUser, newUserID, newUserEmail } = req.session;
+    console.log(newUser)
     renderTemplate(Main, { newUser, newUserID, newUserEmail } || null, res)
 });
 
