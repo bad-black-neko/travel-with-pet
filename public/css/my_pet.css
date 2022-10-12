@@ -6,18 +6,49 @@ body {
 .pet-form-wrapper {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    /* align-items: center; */
     background-color: white;
     width: 750px;
     padding: 25px;
     border-radius: 30px;
     box-shadow: -1px 0px 158px 53px #ac47e9;
     margin: 50px auto;
-    text-align: center;
+    /* text-align: center; */
 }
 
 .pet-form {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    /* align-items: center; */
+}
+
+.label {
+    padding: 10px 0 10px 0;
+}
+
+.inpWrapper {
+    display: flex;
+    justify-content: space-between;
+}
+.inp {
+    border-radius: 30px;
+    border: solid 1px #ac47e9;
+    text-align: center;
+    /* margin-left: 30%; */
+    width: 40%;
+    margin: 10px;
+}
+
+.btn {
+    border-radius: 30px;
+    width: 50%;
+    margin: auto;
+    margin-top: 10px;
+    background-color: #f5c74f;
+    border: none;
+}
+
+.btn-primary:hover {
+    background-color: #ac47e9;
+    --bs-btn-hover-bg: #ac47e9;
 }
