@@ -1,0 +1,51 @@
+body {
+    background: rgb(255,199,59);
+    background: linear-gradient(90deg, rgba(255,199,59,1) 0%, rgba(255,188,188,1) 35%, rgba(221,165,255,1) 100%);
+}
+
+.login-form-wrapper {
+    margin: 10% 0 0 30%;
+    background-color: white;
+    width: 550px;
+    padding: 25px;
+    /* border: 1px solid #8a13d2; */
+    border-radius: 30px;
+    box-shadow: -1px 0px 158px 53px #ac47e9;
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+}
+
+.label {
+    padding: 5px 0 5px 0;
+}
+
+.inp {
+    border-radius: 30px;
+    border: solid 1px #ac47e9;
+    text-align: center;
+}
+
+.btn {
+    border-radius: 30px;
+    width: 50%;
+    margin: auto;
+    margin-top: 10px;
+    background-color: #f5c74f;
+    border: none;
+}
+
+.btn-primary:hover {
+    background-color: #ac47e9;
+    --bs-btn-hover-bg: #ac47e9;
+}
+.round-img {
+    width: 80px;
+    height: 80px;
+    position: fixed;
+    left: 900px;
+    top: 175px;
+}

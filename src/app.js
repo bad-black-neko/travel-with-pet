@@ -13,15 +13,8 @@ const FileStore = require('session-file-store')(session);
 
 const mainRouter = require('./routes/main_page');
 const regRouter = require('./routes/registr');
-// const loginRouter = require('./routes/login');
-// const mainTwoRouter = require('./routes/mainTwo');
-// const personalAreaRouter = require('./routes/personalArea');
-// const basketRouter = require('./routes/basket');
-// const basketAddRouter = require('./routes/basketAdds');
-// const cardAddRouter = require('./routes/cardAdds');
-// const marketRouter = require('./routes/market');
-// const orderSellRouter = require('./routes/orderSells');
-// const marketBasketRouter = require('./routes/marketBaskets');
+const loginRouter = require('./routes/login');
+// const logoutRouter = require('./routes/logout');
 
 const { sequelize } = require('../db/models');
 
@@ -48,17 +41,19 @@ app.use(session(sessionConfig));
 
 app.use('/', mainRouter);
 app.use('/registr', regRouter);
+app.use('/login', loginRouter);
+// app.use('/logout', logoutRouter);
 
-// app.get('/logout', (req, res) => {
-//   if (req.session.newUser) {
-//     req.session.destroy(() => {
-//       res.clearCookie('magicTheGathering');
-//       res.sendStatus(200);
-//     });
-//   } else {
-//     res.sendStatus(400);
-//   }
-// });
+app.get('/logout', (req, res) => {
+  if (req.session.newUser) {
+    req.session.destroy(() => {
+      res.clearCookie('travel-with-pet');
+      res.sendStatus(200);
+    });
+  } else {
+    res.sendStatus(400);
+  }
+});
 
 
 app.listen(PORT, async () => {

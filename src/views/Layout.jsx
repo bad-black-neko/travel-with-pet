@@ -1,7 +1,7 @@
 const React = require('react');
 
 module.exports = function Layout({
-    children, newUser, newUserCity, newUserID, userCards,
+    children, newUser
 }) {
     return (
         <html lang="en">
@@ -20,23 +20,37 @@ module.exports = function Layout({
                     <header>
                         <nav className="navbar navbar-expand-lg navbar-light bg-light">
                             <div className="container-fluid">
-                                <a className="navbar-brand" href="/">PetTrip</a>
-                                <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                                    <span className="navbar-toggler-icon"></span>
-                                </button>
+                                <a className="navbar-brand active" href="/">PetTrip</a>
+
+                            {/* { newUser ? ( */}
                                 <div className="collapse navbar-collapse" id="navbarNav">
                                     <ul className="navbar-nav">
                                         <li className="nav-item">
-                                            <a className="nav-link active" aria-current="page" href="#">About</a>
+                                            <a className="nav-link" aria-current="page" href="#">About</a>
                                         </li>
                                         <li className="nav-item">
                                             <a className="nav-link" href="/registr">Registr</a>
                                         </li>
                                         <li className="nav-item">
-                                            <a className="nav-link" href="#">Login</a>
+                                            <a className="nav-link" href="/login">Login</a>
+                                        </li>
+                                    </ul>
+                                </div> 
+                                {/* ) : (
+                                    <div className="collapse navbar-collapse" id="navbarNav">
+                                    <ul className="navbar-nav">
+                                        <li className="nav-item">
+                                            <a className="nav-link" aria-current="page" href="/counties">Country navigation</a>
+                                        </li>
+                                        <li className="nav-item">
+                                            <a className="nav-link" href="/mypet">My pet</a>
+                                        </li>
+                                        <li className="nav-item">
+                                            <a className="nav-link" href="/logout">Logout</a>
                                         </li>
                                     </ul>
                                 </div>
+                            )} */}
                             </div>
                         </nav>
                     </header>
