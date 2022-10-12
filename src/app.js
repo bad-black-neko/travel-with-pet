@@ -15,6 +15,7 @@ const mainRouter = require('./routes/main_page');
 const regRouter = require('./routes/registr');
 const loginRouter = require('./routes/login');
 // const logoutRouter = require('./routes/logout');
+const addPetRouter = require('./routes/my_pet');
 
 const { sequelize } = require('../db/models');
 
@@ -43,6 +44,7 @@ app.use('/', mainRouter);
 app.use('/registr', regRouter);
 app.use('/login', loginRouter);
 // app.use('/logout', logoutRouter);
+app.use('/mypet', addPetRouter);
 
 app.get('/logout', (req, res) => {
   if (req.session.newUser) {
