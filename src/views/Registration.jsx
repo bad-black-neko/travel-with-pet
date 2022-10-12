@@ -5,7 +5,7 @@ module.exports = function Registr() {
     return (
         <Layout>
             <link rel="stylesheet" href="css/registr.css" />
-            {/* <img className='round-img' src='../img/round.png'></img> */}
+            <img className='round-img' src='../img/round.png'></img>
             <div className='registr-form-wrapper'>
                 <h2 className="zareg">Registration</h2>
                 <form action="/registr" method="POST" id="loginForm" className="regForm">

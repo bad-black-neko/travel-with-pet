@@ -43,11 +43,11 @@ body {
     --bs-btn-hover-bg: #ac47e9;
 }
 .round-img {
-    width: 80px;
-    height: 80px;
+    width: 100px;
+    height: 100px;
     position: fixed;
-    left: 900px;
-    top: 175px;
+    left: 920px;
+    top: 170px;
 }
 /* .form-control {
     width: 70%;

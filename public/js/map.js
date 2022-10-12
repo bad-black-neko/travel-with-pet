@@ -1,7 +1,7 @@
 ymaps.ready(function () {
   var myMap = new ymaps.Map("YMapsID", {
-    center: [0, 0],
-    zoom: 1
+    center: [1, 1],
+    zoom: 3
   });
 
 
@@ -11,6 +11,7 @@ ymaps.ready(function () {
     iconImageSize: [20, 20],
     iconImageOffset: [-3, -42],
     // iconCaption: 'Russia'
+    locationUrl: 'test'
   });
 
   myPlacemarkRussia.properties.set({
@@ -26,8 +27,16 @@ ymaps.ready(function () {
     iconImageSize: [20, 20],
     iconImageOffset: [-3, -42],
     iconCaption: 'Turkey',
+    hintContent: 'Текст всплывающей подсказки',
+    locationUrl: 'http://localhost:3000/'
   });
 
   myMap.geoObjects.add(myPlacemarkTurkey);
+    
+    myMap.geoObjects.events.add('click', function (e) {
+        // Объект на котором произошло событие
+        let target = e.get('target');
+        window.location.href = target.properties.get('locationUrl');
+    });
 
 });
